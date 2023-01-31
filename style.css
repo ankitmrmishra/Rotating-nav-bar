@@ -5,33 +5,52 @@
 }
 
 body{
-    background-color: black;
-    min-height: 100vh;
+    background-color: rgb(74, 82, 82);
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+.mydog , .ankit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    color: coral;
+}
+  
+p{
+    color: black;
+    margin-top: 2rem;
+    line-height: 30px;
+}
+h2{
+    margin-top: 1rem;
+    color: blueviolet;
 }
  .circle{
+    
     z-index: 99;
     background-color: blue;
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+    height: 12rem;
     border-radius: 50%;
     position:absolute;
 
-  top: -11%;
-  left: -11%;
+top: -85px;
+    left: -85px;
  
     
 }
 .circle-rotate{
 rotate: -128deg;
-transition: linear 0.3s ;
+transition: linear 0.5s ;
 }
 .circle-back{
-    rotate: 1deg;
-        transition: linear 0.3s;
+    transform: rotate(0deg);
+        transition: linear 0.5s;
 }
 #open{
     position: relative;
-    left: 40%;
+    left: 50%;
     top: 60%;
     font-size: 20px;
     background-color: blue;
@@ -41,8 +60,8 @@ transition: linear 0.3s ;
 }
 #close{
     position: relative;
-    left:30%;
-    top: 38%;
+    left:24%;
+    top: 44%;
     font-size: 20px;
         background-color: blue;
         color: white;
@@ -51,30 +70,37 @@ transition: linear 0.3s ;
         cursor: pointer;
 }
 .content{
-    z-index: 90;
-    display: flex;
    
-    flex-direction: column;
-    top: 50%;
-    align-items: center;
-    justify-content: center;
-    transform-origin: top left;
-   padding: 0;
-overflow-y: hidden;
+    max-width: 1000rem;
+        margin: 50px auto;
+   padding-bottom: 3rem;
+    z-index: 90;
+   transform-origin: top left;
+   position: absolute;
+   top: -80px;
+
 color: rgb(30, 166, 251);
 background-color: white;
 }
 .texitems{
-    padding-top: 2rem;
-    margin: 3rem;
+
+    margin-top: 10rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    
 }
 
 .content.rotate{
     transform: rotate(-20deg);
-    transition: transform 0.5s ;
+    transition: transform 0.5s ease-in ;
+}
+.content.rotate-back {
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-in;
 }
 .horiz-nav {
-    color: rgb(226, 156, 43);
+    background-color: rgb(251, 249, 249);
+    font-size: 1rem;
     position: absolute;
    bottom: -30%;
     height: 100vh;
@@ -82,21 +108,31 @@ background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateX(-62%);
+    transform: translateX(-150%);
     transition: transform 0.5s ease-in;
    }
 
    .rotating{
-    transform: translateX(5rem);
+    transform: translateX(15rem);
     transition: transform 0.5s ease-in;
    }
+   .rotating1 {
+       transform: translateX(0);
+       transition: transform 0.5s ease-in;
+   }
+   
 .horiz-nav ul li {
     list-style-type: none;
     text-transform: uppercase;
-    color: #fff;
+    
+    color: rgb(255, 255, 255);
     margin: 40px 0;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+}
+ .items :hover{
+    color: rgb(255, 153, 0);
+    cursor: pointer;
 }
    
    .horiz-nav ul li+li {
